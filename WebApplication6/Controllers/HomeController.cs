@@ -13,6 +13,7 @@ namespace WebApplication3.Controllers
         {
             _logger = logger;
         }
+        
 
         public IActionResult Index()
         {
@@ -32,6 +33,8 @@ namespace WebApplication3.Controllers
             DBmanager dbmanager = new DBmanager();
             try
             {
+                user.PID = Guid.NewGuid().ToString().Substring(0, 8);
+                user.STA = false;
                 dbmanager.newPackage(user);
             }
             catch (Exception e)

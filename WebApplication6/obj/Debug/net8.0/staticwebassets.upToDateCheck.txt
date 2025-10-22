@@ -1,5 +1,3 @@
-wwwroot\css\main.css
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\Searchs_002.png
 wwwroot\js\site.js

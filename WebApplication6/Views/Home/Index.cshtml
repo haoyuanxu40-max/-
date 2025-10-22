@@ -16,23 +16,10 @@
 <body>
     <div class="s002">
         <fieldset>
-            <legend>領取系統</legend>
+            <legend>登記領取系統</legend>
         </fieldset>
         <form method="get" method="post">
             <div class="inner-form">
-                <!-- 第一個輸入框 -->
-                <div class="input-field first-wrap">
-                    <input id="searchfloor" type="text" name="Floor" placeholder="請輸入樓層" required/>
-                    <button type="button" class="close-btn" id="cleafloor">&times;</button>
-                </div>
-
-                <!-- 第二個輸入框 -->
-                <div class="input-field second-wrap">
-                    <input id="searchnumber" type="text" name="Number" placeholder="請輸入門牌號" required/>
-                    <button type="button" class="close-btn" id="clearnumber">&times;</button>
-                </div>
-
-                <!-- 第三個輸入框 -->
                 <div class="input-field third-wrap">
                     <input id="searchphone" type="text" name="Phonenumber" placeholder="請輸入電話" required/>
                     <button type="button" class="close-btn" id="clearphone">&times;</button>
@@ -44,7 +31,7 @@
 
                 <!-- 搜尋按鈕 -->
                 <div class="input-field fourth-wrap">
-                    <button class="btn-search" type="submit">上傳</button>
+                    <button class="btn-search" type="submit">新增</button>
                 </div>
             </div>
         </form>
@@ -56,11 +43,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>編號</th>
-                        <th>樓層</th>
-                        <th>門牌號</th>
+                        <th>包裹編號</th>
                         <th>收件人</th>
                         <th>電話</th>
+                        <th>領取狀態</th>
                         <th>收取日期</th>
                     </tr>
                 </thead>
@@ -68,12 +54,21 @@
                     @foreach (var p in Model.Packages)
                     {
                         <tr>
-                            <th>@p.ID</th>
-                            <th>@p.Floor</th>
-                            <th>@p.Number</th>
-                            <th>@p.Name</th>
-                            <th>@p.PhoneNumber</th>
-                            <th>@p.Date</th>
+                            <td>@p.PID</td>
+                            <td>@p.Name</td>
+                            <td>@p.PhoneNumber</td>
+                            <td>
+                                <span id="status-@p.ID" class="@(p.STA ? "status-true" : "status-false")">
+                                    @(p.STA ? "已領取" : "未領取")
+                                </span>
+                            </td>
+                            <td>
+                                <input type="checkbox" class="status-toggle"
+                                       data-id="@p.ID"
+                                       @(p.STA ? "checked" : "") />
+                                <label>已領取</label>
+                            </td>
+                            <td>@p.Date</td>
                         </tr>
                     }
                 </tbody>
@@ -106,6 +101,21 @@
                 input.value = '';
                 closeBtn.style.display = 'none';
                 input.focus();
+           
+            $(document).on('change', '.status-toggle', function () {
+            var id = $(this).data('id');
+            var isReceived = $(this).is(':checked');
+
+            $.ajax({
+                url: '/Packages/UpdateStatus',
+                type: 'POST',
+                data: { id: id, isReceived: isReceived },
+                success: function () {
+                    $('#status-' + id).text(isReceived ? '已領取' : '未領取');
+                },
+                error: function () {
+                    alert('❌ 更新狀態失敗');
+                }
             });
         });
     </script>

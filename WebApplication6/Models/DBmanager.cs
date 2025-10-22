@@ -27,10 +27,10 @@ namespace 系統端.Models
                     Package package = new Package
                     {
                         ID = reader.GetInt32(reader.GetOrdinal("id")),
-                        Floor = reader.GetString(reader.GetOrdinal("floor")),
-                        Number = reader.GetString(reader.GetOrdinal("number")),
+                        PID = reader.GetString(reader.GetOrdinal("pid")),
                         Name = reader.GetString(reader.GetOrdinal("name")),
                         PhoneNumber = reader.GetString(reader.GetOrdinal("phonenumber")),
+                        STA = reader.GetBoolean(reader.GetOrdinal("status")),
                         Date = reader.GetDateTime(reader.GetOrdinal("date"))
                     };
                        packages.Add(package);
@@ -47,13 +47,13 @@ namespace 系統端.Models
         public void newPackage(Package user)
         {
             SqlConnection sqlconnection = new SqlConnection(connStr);
-            SqlCommand sqlcommand = new SqlCommand(@"INSERT INTO Package(floor,number,name,phonenumber,date) VALUES(@Floor,@Number,@Name,@PhoneNumber,GETDATE())");
+            SqlCommand sqlcommand = new SqlCommand(@"INSERT INTO Package(PID,Name,PhoneNumber,STA) VALUES(@PID,@Name,@PhoneNumber,@STA)");
             sqlcommand.Connection = sqlconnection;
 
-            sqlcommand.Parameters.Add(new SqlParameter("@Floor", user.Floor));
-            sqlcommand.Parameters.Add(new SqlParameter("@Number", user.Number));
+            sqlcommand.Parameters.Add(new SqlParameter("@PID", user.PID));
             sqlcommand.Parameters.Add(new SqlParameter("@Name", user.Name));
             sqlcommand.Parameters.Add(new SqlParameter("@PhoneNumber", user.PhoneNumber));
+            sqlcommand.Parameters.Add(new SqlParameter("@STA", user.STA));
 
             sqlconnection.Open();
             sqlcommand.ExecuteNonQuery();
