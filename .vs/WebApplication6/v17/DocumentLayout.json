@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|c:\\users\\user\\onedrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\webapplication6\\models\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|solutionrelative:webapplication6\\models\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|c:\\users\\user\\onedrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\webapplication6\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|solutionrelative:webapplication6\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|c:\\users\\user\\onedrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\webapplication6\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|solutionrelative:webapplication6\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|c:\\users\\user\\onedrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\webapplication6\\packageid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DD5D7FA-541F-4AB8-BC26-9025C3FDE0B7}|WebApplication6\\WebApplication6.csproj|solutionrelative:webapplication6\\packageid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DBmanager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\Models\\DBmanager.cs",
-              "RelativeDocumentMoniker": "WebApplication6\\Models\\DBmanager.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\Models\\DBmanager.cs",
-              "RelativeToolTip": "WebApplication6\\Models\\DBmanager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PackageId.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\PackageId.cs",
+              "RelativeDocumentMoniker": "WebApplication6\\PackageId.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\PackageId.cs",
+              "RelativeToolTip": "WebApplication6\\PackageId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T17:48:15.353Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T22:15:24.537Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "WebApplication6\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "WebApplication6\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-22T20:53:22.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication6\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\\u684C\u9762\\\u7CFB\u7D71\u7AEF\\WebApplication6\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebApplication6\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAADwv0gAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAKYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T01:35:11.044Z",
+              "WhenOpened": "2025-10-22T20:41:05.749Z",
               "EditorCaption": ""
             }
           ]
